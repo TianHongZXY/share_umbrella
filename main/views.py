@@ -3,7 +3,7 @@ from .. import db
 from ..models import User
 from . import main
 from .forms import LoginForm, RegistrationForm
-from flask_login import login_required
+from flask_login import login_required, login_user, logout_user, current_user
 
 @main.route('/', methods=['GET', 'POST'])
 def index():
@@ -63,12 +63,16 @@ def register():
     return render_template('register.html', form=form)
 
 
-@app.route('/ineedumbrella')
+@main.route('/ineedumbrella')
 def i_need_umbrella():
     latitude = jsonify(request.values.get('latitude')) # 纬度
     longitude = jsonify(request.values.get('longitude')) # 经度
-
-@app.route('/iofferumbrella')
+    notes = jsonify(request.values.get('notes'))
+    author = current_user
+    is_active = True
+    expire_time = jsonify(request.values.get('expire_time'))
+    
+@main.route('/iofferumbrella')
 def i_offer_umbrella():
     latitude = jsonify(request.values.get('latitude')) # 纬度
     longitude = jsonify(request.values.get('longitude')) # 经度

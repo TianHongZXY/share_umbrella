@@ -4,8 +4,18 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+watchdog = "*"
+flask-socketio = "*"
+autopep8 = "*"
 
 [packages]
+flask = "*"
+python-dotenv = "*"
+flask-sqlalchemy = "*"
+flask-login = "*"
+flask-migrate = "*"
+flask-wtf = "*"
+flask-bootstrap = "*"
 
 [requires]
 python_version = "3.6"

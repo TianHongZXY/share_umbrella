@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/TGschoolGuide-map/.idea/TGschoolGuide-map.iml" filepath="$USER_HOME$/Documents/GitHub/TGschoolGuide-map/.idea/TGschoolGuide-map.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/flask/.idea/flask.iml" filepath="$USER_HOME$/Documents/GitHub/flask/.idea/flask.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/flaskstudy/.idea/flaskstudy.iml" filepath="$USER_HOME$/Documents/GitHub/flaskstudy/.idea/flaskstudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/share_umbrella.iml" filepath="$PROJECT_DIR$/.idea/share_umbrella.iml" />
+    </modules>
+  </component>
+</project>
