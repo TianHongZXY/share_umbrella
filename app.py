@@ -13,6 +13,7 @@ def make_shell_context():
 @app.cli.command()
 @click.option('--drop', is_flag=True, help='Create after drop.')
 def initdb(drop):
+    '''Initialize database.'''
     if drop:
         click.confirm('This operation will delete the database, are you sure?', abort=True)
         db.drop_all()

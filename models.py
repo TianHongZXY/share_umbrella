@@ -9,8 +9,8 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     wx = db.Column(db.String(64), unique=True)
     username = db.Column(db.String(64), index=True)
-    # True男，False女
-    sex = db.Column(db.Boolean, default=True)
+    # 男1，女0
+    sex = db.Column(db.Integer, default=1)
     success_counts = db.Column(db.Integer, default=0)
     neednotes = db.relationship('NeedNotes')
     offernotes = db.relationship('OfferNotes')
@@ -24,8 +24,7 @@ class NeedNotes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.Text)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    is_active = db.Column(db.Boolean, default=True)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow) # 还得加上有效期时间
     helper = db.Column(db.String())
 
     def __init__(self, content=content, user_id=user_id):
